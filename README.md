@@ -1,4 +1,4 @@
-# Inomia
+# Nezumi Iro
 
 Before running the script you would need the Bot Token stored inside a .env file
 ```
@@ -10,4 +10,4 @@ In order to start the bot, use the command
 python index.py
 ```
 \
-Thank you for helping us out in the development of Inomia! ♥
+Thank you for helping us out in the development of Nezumi! ♥

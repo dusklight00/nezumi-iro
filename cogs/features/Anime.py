@@ -171,5 +171,24 @@ class AnimeCog(commands.Cog):
         #em.set_image(url=random.choice(husbando))
         await ctx.send(embed=em)
 
+    @commands.command()
+    async def hentaifeet(self, ctx):
+        insomnia_guild_id = 898127603309899806
+        if ctx.message.guild.id == insomnia_guild_id:
+            await ctx.send("This feature has been **disabled** in this server.")
+            return
+          
+        hentai = Subreddit("hentaifeet")
+        hentai.get_random()
+        url = hentai.url
+        title = hentai.title
+        upvotes = hentai.upvotes
+        comments = hentai.comments
+        em =  discord.Embed(title=title, colour = discord.Colour.blue())
+        em.set_image(url=url)
+        em.set_footer(text=f"powered by Inomia Devs | {upvotes} votes | {comments} comments")
+        #em.set_image(url=random.choice(husbando))
+        await ctx.send(embed=em)
+        
 def setup(bot):
     bot.add_cog(AnimeCog(bot))

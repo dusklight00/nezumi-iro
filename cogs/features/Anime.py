@@ -154,6 +154,10 @@ class AnimeCog(commands.Cog):
     
     @commands.command()
     async def hentai(self, ctx):
+        if not ctx.channel.is_nsfw():
+            await ctx.send("This feature is only available in **NSFW** channels.")
+            return
+
         insomnia_guild_id = 898127603309899806
         if ctx.message.guild.id == insomnia_guild_id:
             await ctx.send("This feature has been **disabled** in this server.")
@@ -173,6 +177,10 @@ class AnimeCog(commands.Cog):
 
     @commands.command()
     async def hentaifeet(self, ctx):
+        if not ctx.channel.is_nsfw():
+            await ctx.send("This feature is only available in **NSFW** channels.")
+            return
+
         insomnia_guild_id = 898127603309899806
         if ctx.message.guild.id == insomnia_guild_id:
             await ctx.send("This feature has been **disabled** in this server.")

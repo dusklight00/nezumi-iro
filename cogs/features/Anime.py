@@ -186,6 +186,7 @@ class AnimeCog(commands.Cog):
             await ctx.send("This feature has been **disabled** in this server.")
             return
           
+        await ctx.message.delete()
         hentai = Subreddit("hentaifeet")
         hentai.get_random()
         url = hentai.url
